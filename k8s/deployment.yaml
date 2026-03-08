@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: astranova-app
-          image: 806889657148.dkr.ecr.us-east-1.amazonaws.com/astranova-app:latest
+          image: image: 806889657148.dkr.ecr.us-east-1.amazonaws.com/astranova-app:35
           ports:
             - containerPort: 3000
