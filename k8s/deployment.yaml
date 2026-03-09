@@ -2,7 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: astranova-app
-
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: astranova=806889657148.dkr.ecr.us-east-1.amazonaws.com/astranova-app
+    argocd-image-updater.argoproj.io/astranova.update-strategy: latest
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   replicas: 2
 
@@ -18,7 +21,7 @@ spec:
     spec:
       containers:
         - name: astranova-app
-          image: 806889657148.dkr.ecr.us-east-1.amazonaws.com/astranova-app:35
+          image: 806889657148.dkr.ecr.us-east-1.amazonaws.com/astranova-app:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
