@@ -6,6 +6,7 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: astranova=806889657148.dkr.ecr.us-east-1.amazonaws.com/astranova-app
     argocd-image-updater.argoproj.io/astranova.update-strategy: latest
     argocd-image-updater.argoproj.io/write-back-method: git
+
 spec:
   replicas: 2
 
